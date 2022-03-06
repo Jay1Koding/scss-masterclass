@@ -1,16 +1,19 @@
 .father {
   display: flex;
   justify-content: space-around;
-
   height: 100vh;
+  flex-wrap: wrap;
+  /* line을 설정해줌 */
+  align-content: flex-start;
 }
 .child {
+  border: 1px solid black;
+  font-size: 50px;
   color: white;
   width: 200px;
   height: 200px;
   background-color: peru;
-}
-
-.child:nth-child(2) {
-  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
