@@ -7,22 +7,34 @@ body {
   background-color: grey;
   display: grid;
   gap: 10px;
-  height: 50vh;
+  /*
+  * 만약 지정한 column, row보다 많을 경우 지정된 값을 제외한
+  * 나머지 요소들은 전부 꺠져버림
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-  /* place-content: end center; */
-  justify-content: center;
-  align-content: end;
+
+  이를 해결하기 위함
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: 100px;
+  grid-auto-rows: 100px;
+  */
+
+  /* 마치 flex-direction 
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  */
+
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
 }
-.header {
+.item:nth-child(odd) {
   background-color: #2ecc71;
+  /* align-self: end;
+  justify-self: center; */
+  /* place-self: end center; */
 }
-.content {
+.item:nth-child(even) {
   background-color: #3498db;
-}
-.nav {
-  background-color: #8e44ad;
-}
-.footer {
-  background-color: #f39c12;
 }
