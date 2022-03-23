@@ -4,13 +4,15 @@ body {
 }
 
 .father {
+  background-color: grey;
   display: grid;
   gap: 10px;
   height: 50vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  /* place-items: y x; */
-  place-items: stretch center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* place-content: end center; */
+  justify-content: center;
+  align-content: end;
 }
 .header {
   background-color: #2ecc71;
