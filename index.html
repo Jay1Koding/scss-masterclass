@@ -2,128 +2,137 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a3ade6de6d.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
+
     <title>(S)CSS Masterclass</title>
   </head>
   <body>
-    <main>
-      <div class="hero">
-        <div class="hero__photo"></div>
-        <h2>News thats lasts.</h2>
-        <p>
-          <span>About</span> Schwartz Media publishes intelligent news and
-          current affairs that breaks the 24-hour news cycle. We offer a nuanced
-          examination of Australia and the world, focused on fresh insight and
-          literary expression. Our audience reads to know, not just to agree. We
-          invest in long-form journalism where the issues demand it, providing
-          writing of a quality that makes difficult topics clear. Schwartz Media
-          publishes Australia’s most respected writers across The Saturday
-          Paper, The Monthly magazine and the daily podcast 7am, alongside our
-          sister publications, Quarterly Essay and Australian Foreign Affairs.
-        </p>
+    <!-- Header -->
+    <header>
+      <div class="logo-schwartz">
+        <i class="fas fa-bars"></i>
+        <a href="#">Schwartz</a>
       </div>
 
-      <section class="products">
-        <article class="product">
-          <div>
-            <h4 class="product__category">journalism</h4>
-            <p>
-              Our journalists create in-depth, independent, original public
-              interest reporting, focusing on storytelling and insight.
-            </p>
-            <a href="#" class="btn">Learn More</a>
+      <a href="#" class="logo-logo">Media</a href="#">
+    </header>
+
+    <!-- Main -->
+        
+    <main>
+      <div class="hero">
+        <img src='https://source.unsplash.com/random/450x460' alt="hero">
+        <h2>News that lasts.</h2>
+      </div>
+
+      <div class="home">
+        <p>
+          <span>About</span>Schwartz is an organisation of unusual expertise, bound by a common
+            purpose. Our aim is to publish writing worthy of our reader’s
+            attention. We reject ideology in favour of integrity and rational,
+            informed ideals. Our commitment is to a thinking Australia, to keep
+            seeking out the raw materials from which the nation makes up its mind,
+            providing a home for conversations that can’t happen anywhere else.
+        </p>
+        <a href="#" class="view-our-companies">
+          <i class="fas fa-arrow-circle-right"></i>
+          <span>View our Companies</span>
+        </a>
+      </div>
+
+      <div class="grid-container">
+        <article>
+          <div class="grid-row">
+            <h2>Journalism</h2>
+            <p>Our journalists create in-depth, independent, original public interest reporting, focusing on storytelling and insight.</p>
+            <a href="#"><span>Learn more</span></a>
           </div>
-          <img src="https://source.unsplash.com/random/500x360" alt="" />
+          <div class="grid-row__image"><img src="https://source.unsplash.com/500x380" alt="" /></div>
         </article>
-        <article class="product">
-          <div>
-            <h4 class="product__category">journalism</h4>
-            <p>
-              Our journalists create in-depth, independent, original public
-              interest reporting, focusing on storytelling and insight.
-            </p>
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Learn More</a>
+        
+        <article>
+          <div class="grid-row">
+            <h2>The Monthly</h2>
+            <p>The Monthly publishes long-form journalism from the nation's leading writers and thinkers, covering Australian politics, culture and ideas.</p>
+            <a href="#"><span>Learn more</span></a>
+            <a href="#"><span>Advertise</></a>
           </div>
-          <img src="https://source.unsplash.com/random/500x360" alt="" />
+          <div class="grid-row__image"><img src="https://source.unsplash.com/500x381" alt="" /></div>
         </article>
-        <article class="product">
-          <div>
-            <h4 class="product__category">journalism</h4>
-            <p>
-              Our journalists create in-depth, independent, original public
-              interest reporting, focusing on storytelling and insight.
-            </p>
-            <a href="#" class="btn">Learn More</a>
+        
+        <article>
+          <div class="grid-row">
+            <h2>Journalism</h2>
+            <p>Our journalists create in-depth, independent, original public interest reporting, focusing on storytelling and insight.</p>
+            <a href="#"><span>Learn more</span></a>
           </div>
-          <img src="https://source.unsplash.com/random/500x360" alt="" />
+          <div class="grid-row__image"><img src="https://source.unsplash.com/500x380" alt="" /></div>
         </article>
-        <article class="product">
-          <div>
-            <h4 class="product__category">journalism</h4>
-            <p>
-              Our journalists create in-depth, independent, original public
-              interest reporting, focusing on storytelling and insight.
-            </p>
-            <a href="#" class="btn">Learn More</a>
-            <a href="#" class="btn">Learn More</a>
+        
+        <article>
+          <div class="grid-row">
+            <h2>The Monthly</h2>
+            <p>The Monthly publishes long-form journalism from the nation's leading writers and thinkers, covering Australian politics, culture and ideas.</p>
+            <a href="#"><span>Learn more</span></a>
+            <a href="#"><span>Advertise</></a>
           </div>
-          <img src="https://source.unsplash.com/random/500x360" alt="" />
+          <div class="grid-row__image"><img src="https://source.unsplash.com/500x381" alt="" /></div>
         </article>
-        <div class="line">
-          <article class="product">
-            <div>
-              <h4 class="product__category">journalism</h4>
-              <img src="https://source.unsplash.com/random/500x360" alt="" />
-              <p>
-                Our journalists create in-depth, independent, original public
-                interest reporting, focusing on storytelling and insight.
-              </p>
-              <a href="#" class="btn">Learn More</a>
-            </div>
-          </article>
-          <article class="product">
-            <div>
-              <h4 class="product__category">journalism</h4>
-              <img src="https://source.unsplash.com/random/500x360" alt="" />
-              <p>
-                Our journalists create in-depth, independent, original public
-                interest reporting, focusing on storytelling and insight.
-              </p>
-              <a href="#" class="btn">Learn More</a>
-            </div>
-          </article>
-        </div>
-      </section>
-      <div class="links">
-        <div class="link">
-          <h4>Careers</h4>
-          <span>Work at the country’s leading independent publisher.</span>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-        <div class="link">
-          <h4>Careers</h4>
-          <span>Work at the country’s leading independent publisher.</span>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-        <div class="link">
-          <h4>Careers</h4>
-          <span>Work at the country’s leading independent publisher.</span>
-          <a href="#" class="btn">Learn More</a>
+
+        <div class="links">
+          <div class="link">
+            <h2>Quarterly Essay</h2>
+            <div class="link__image">
+              <img src="https://source.unsplash.com/500x383" alt="" /></div>
+              <p>Quarterly Essay is the leading agenda-setting journal of politics and culture in Australia.</p>
+            <a href="#"><span>Learn more</span></a>
+            <a href="#"><span>Advertise</></a>
+          </div>
+
+          <div class="link">
+            <h2>Australian Foreign Affairs</h2>
+            <div class="link__image">
+              <img src="https://source.unsplash.com/500x384" alt="" /></div>
+              <p>Australian Foreign Affairs is the country’s leading foreign affairs journal.<p></p>
+            <a href="#"><span>Learn more</span></a>
+            <a href="#"><span>Advertise</></a>
+          </div>
         </div>
       </div>
     </main>
+
+    <!-- Footer -->
     <footer>
-      <div class="footer__top">
-        <span>Schwartz</span>
-        <ul>
-          <li>Schwartz Media</li>
-          <li>Schwartz Books</li>
-          <li>Schwartz Pro</li>
-        </ul>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h3>Schwartz</h3>
+          <div class="footer-left__nav">
+            <ul>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            
+          </div class="footer-left__nav">
+          <div class="footer-left__nav">
+            <ul>
+              <li><a href="#">© 2022 Schwartz Publishing</a></li>
+              <li><a href="#">All rights reserved</a></li>
+            </ul>
+          </div class="footer-left__nav">
+        </div>
+        <div class="footer-right">
+          <a href="#">Schwartz Media</a>
+          <a href="#">Schwartz Books</a>
+        </div>
       </div>
     </footer>
+    
   </body>
 </html>

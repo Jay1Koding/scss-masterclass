@@ -1,21 +1,17 @@
 %categoryTitle {
+  font-size: 28px;
   font-weight: 600;
-  font-size: 22px;
-  margin-bottom: 50px;
 }
 
-%btns {
-  text-decoration: none;
-  color: inherit;
-  border: $border;
-  border-radius: 40%;
-  padding: 10px 30px;
-  font-weight: 500;
-  border-radius: 99px;
+%grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 18px 0;
+  border-top: $border;
+}
 
-  transition: color 0.5s linear, background-color 0.5s linear;
-  &:hover {
-    color: white;
-    background-color: black;
-  }
+%footer {
+  border: none;
+  color: white;
+  padding: 0;
 }

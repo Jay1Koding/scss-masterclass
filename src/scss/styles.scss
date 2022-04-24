@@ -8,136 +8,164 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-main {
-  grid-column-start: 2;
-  line-height: 1.6;
-  width: 55%;
-  margin: 0 auto;
-}
-
-p {
-  font-size: $fontMedium;
-}
-
-.hero {
-  margin-top: 150px;
   width: 100%;
+  height: 100vh;
+  line-height: 1.4;
+  & > *:not(header) {
+    a {
+      border: $border;
+      border-radius: 50px;
+      padding: 10px 30px;
+      margin-right: 12px;
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  .logo-schwartz {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 32px;
+      margin: $headerSpace;
+      padding-bottom: 10px;
+    }
+  }
+  .logo-logo {
+    margin: $headerSpace;
+  }
+}
+
+main {
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 150px;
-  .hero__photo {
-    height: 70vh;
-    width: 90%;
-    background-image: url('https://source.unsplash.com/random/450x460');
-    background-size: cover;
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 50vw;
+      height: 70vh;
+      margin-bottom: 70px;
+    }
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+    }
   }
-  h2 {
-    font-weight: 500;
-    font-size: 32px;
-    margin-top: 80px;
-    margin-bottom: 120px;
-  }
-  p {
-    font-size: $fontMedium;
-    span {
-      font-size: $fontMedium - 5px;
-      margin-right: 50px;
+
+  .home {
+    width: 55%;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 180px;
+    p {
+      margin-bottom: 20px;
+      span {
+        font-weight: bold;
+        font-size: 24px;
+        margin-right: 60px;
+      }
+    }
+    .view-our-companies {
+      font-size: 24px;
       font-weight: 500;
     }
   }
-}
 
-.products {
-  display: grid;
+  .grid-container {
+    width: 55%;
 
-  grid-template-columns: 1fr;
-
-  .product {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 20px 0;
-    border-top: $border;
-    grid-column-start: span 2;
-
-    &:nth-child(2),
-    &:nth-child(4) {
-      div {
+    article {
+      @extend %grid;
+      .grid-row {
         order: 1;
+        h2 {
+          @extend %categoryTitle;
+        }
+        p {
+          margin: 50px 0;
+          font-size: 36px;
+        }
       }
-    }
-    p {
-      margin-bottom: 50px;
-    }
-    .product__category {
-      @extend %categoryTitle;
-    }
-  }
-  .line {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-start: span 2;
-    .product {
-      grid-template-columns: 1fr;
-      grid-column-start: span 1;
-      p {
-        font-size: 22px;
-        margin-top: 30px;
+      &:nth-child(2),
+      &:nth-child(4) {
+        .grid-row__image {
+          order: 2;
+        }
       }
     }
   }
 }
 
 .links {
-  display: grid;
-  margin-top: 100px;
-  border-top: $border;
-  padding-top: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 200px;
-  gap: 20px;
-  .link {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    h4 {
-      @extend %categoryTitle;
-      margin-bottom: 30px;
-    }
-    span {
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
+  @extend %grid;
+  margin-bottom: 100px;
+  h2 {
+    @extend %categoryTitle;
+    margin-bottom: 24px;
   }
-}
-
-a.btn {
-  @extend %btns;
+  p {
+    margin: 50px 0;
+    font-size: 24px;
+  }
 }
 
 footer {
   background-color: #4d4c4c;
-
   width: 100%;
-  .footer__top {
-    padding: 100px 0;
+  .footer-container {
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        @extend %categoryTitle;
+        margin-bottom: 100px;
+      }
+      .footer-left__nav {
+        margin-bottom: 20px;
+        a {
+          @extend %footer;
+        }
+      }
+    }
+    padding: 50px 0;
     width: 55%;
     margin: 0 auto;
     color: white;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    span {
-      font-size: 38px;
-    }
-    ul {
-      display: flex;
-      width: 100%;
-      li {
-        margin-right: 10px;
-      }
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-right {
+    display: flex;
+    justify-content: space-between;
+    a {
+      @extend %footer;
     }
   }
 }
