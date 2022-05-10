@@ -1,50 +1,84 @@
+@import 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 50px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    visibility: hidden;
+  }
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
   display: grid;
-  grid-template-columns: 1.3fr 4fr;
-  font-size: 14px;
-  align-items: flex-start;
-  h1 {
-    font-weight: 500;
-    cursor: pointer;
+  grid-template-columns: $spacingLeft 4fr;
+  align-items: center;
+  .logo {
+    padding-left: 20px;
+    text-decoration: none;
+    color: black;
+    .grey {
+      color: gray;
+    }
     &:hover {
-      color: #2e856b;
+      color: $green;
+      span {
+        color: $green;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    li {
+      &:hover {
+        color: $green;
+      }
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
   }
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // gap: 20px;
-  column-gap: 20px;
-  row-gap: 80px;
-  nav {
-    grid-template-rows: span 2;
-    padding-bottom: 20px;
-    ul {
-      display: flex;
-      li:not(:last-child) {
-        margin-right: 20px;
+  grid-template-columns: $spacingLeft 4fr;
+  .three-of-four {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    .content__text {
+      h1 {
+        font-weight: 500;
+      }
+      p {
+        margin-top: 18px;
+      }
+      &:first-child {
+        padding-top: 10px;
       }
     }
-  }
-  .photo {
-    &:hover {
-      color: blue;
-    }
-    img {
-      max-width: 100%;
-      margin-bottom: 10px;
-    }
-    h4 {
-      font-size: 14px;
+    .content__container {
+      cursor: pointer;
+      color: $green;
+      &:hover {
+        color: black;
+      }
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
