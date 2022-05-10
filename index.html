@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a3ade6de6d.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
-    <title>(S)CSS Masterclass</title>
+
+    <title>Self</title>
   </head>
   <body>
     <header>
@@ -17,53 +22,91 @@
           <li>About us</li>
         </ul>
       </nav>
-      <h1 class="logo">
-        T
-        <div>o</div>
-        lv
-      </h1>
-      <span>🔍</span>
+      <h1 class="logo">T<span>o</span>lv</h1>
+      <span><i class="fas fa-search"></i></span>
     </header>
 
-    <main>
-      <div class="hero">
-        <div class="hero__img"></div>
-        <div class="hero__text">
-          <h2>
-            Eyes rest from an afternoon in the sun. Smooth textures feel cool on
-            bare feet and skin.
-          </h2>
-          <span
-            >Featuring <a href="#">Kitsune sofa</a>,
-            <a href="#">armchair</a> and
-            <a href="#">I-O coffee table (steel base)</a></span
-          >
-        </div>
+    <div class="hero">
+      <div class="hero__img"></div>
+      <div class="hero__text">
+        <h3>
+          Eyes rest from an afternoon in the sun. Smooth textures feel cool on
+          bare feet and skin.
+        </h3>
+        <span
+          >Featuring <a href="#">Kitsune sofa</a>, <a href="#">armchair</a> and
+          <a href="#">I-O coffee table (steel base)</a></span
+        >
       </div>
-      <div class="banner">
-        <h3 class="banner__title">Time for Living</h3>
-        <p>
-          Take time for life’s little moments. Browsing the news as you eat
-          breakfast. Setting the table for hungry guests. Sinking in to your
-          favourite armchair. At Tolv, your daily rituals are at the heart of
-          our design. We make furniture to give you your best day, every day.
-        </p>
-        <span>Find out more <a href="#">About us</a></span>
+    </div>
+
+    <div class="content">
+      <h2>Time for Living</h2>
+      <p>
+        Take time for life’s little moments. Browsing the news as you eat
+        breakfast. Setting the table for hungry guests. Sinking in to your
+        favourite armchair. At Tolv, your daily rituals are at the heart of our
+        design. We make furniture to give you your best day, every day.
+      </p>
+      <span>Find out more <a href="#">About us</a></span>
+    </div>
+
+    <section class="gallery">
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
       </div>
-      <section class="gallery">
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-        <div class="gallery__item"></div>
-      </section>
-    </main>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+      <div class="gallery__item">
+        <div class="gallery__item__background"></div>
+        <div class="gallery__item__text">hello this is test</div>
+      </div>
+    </section>
+
+    <script>
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+    </script>
   </body>
 </html>
