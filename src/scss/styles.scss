@@ -1,83 +1,133 @@
-@import 'variables';
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 50px;
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    visibility: hidden;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 40px;
 }
 
-header {
-  background-color: white;
+.header {
   width: 100%;
-  height: 50px;
+  background-color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
-  display: grid;
-  grid-template-columns: $spacingLeft 4fr;
-  align-items: center;
-  .logo {
-    padding-left: 20px;
-    text-decoration: none;
-    color: black;
-    .grey {
-      color: gray;
-    }
-    &:hover {
-      color: $green;
-      span {
-        color: $green;
-      }
-    }
+  left: 0;
+  z-index: 1;
+  padding: 0 10px;
+  h1 {
+    font-size: 22px;
+    text-transform: uppercase;
   }
-
-  ul {
-    display: flex;
-    li {
-      &:hover {
-        color: $green;
-      }
-      &:not(:last-child) {
-        margin-right: 20px;
+  nav {
+    ul {
+      display: flex;
+      li {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        &:nth-child(3n + 1) {
+          span {
+            background-color: yellow;
+          }
+        }
+        &:nth-child(3n + 2) {
+          span {
+            background-color: green;
+          }
+        }
+        &:nth-child(3n + 3) {
+          span {
+            background-color: skyblue;
+          }
+        }
+        span {
+          margin-right: 5px;
+          height: 15px;
+          width: 15px;
+          background-color: red;
+          border-radius: 50%;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        &:not(:last-child) {
+          margin-left: 20px;
+        }
       }
     }
   }
 }
 
-main {
+.posts {
   display: grid;
-  grid-template-columns: $spacingLeft 4fr;
-  .three-of-four {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    .content__text {
-      h1 {
-        font-weight: 500;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 55vh;
+  .post {
+    padding: 20px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    .post__header,
+    footer {
+      display: flex;
+      justify-content: space-between;
+      letter-spacing: 1px;
+    }
+
+    &:nth-child(3n + 1) {
+      background-color: tomato;
+    }
+    &:nth-child(3n + 2) {
+      background-color: yellow;
+    }
+    &:nth-child(3n + 3) {
+      background-color: skyblue;
+    }
+    &:nth-child(3n + 4) {
+      background-color: brown;
+    }
+    .post__content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      top: 0;
+      h3 {
+        letter-spacing: 2px;
+        line-height: 1.3;
+        font-size: 28px;
+        text-align: center;
       }
-      p {
-        margin-top: 18px;
-      }
-      &:first-child {
-        padding-top: 10px;
+      .invisible {
+        display: none;
+        height: 100%;
+        width: 100%;
+        background-image: url('https://images.prismic.io/beige/fe5aa219-9522-45ec-b793-6148ec2a0c27_220416_Catrice_1507.jpg?auto=compress,format?auto=format,compress&q=60&w=500');
+        background-position: center;
+        background-size: cover;
       }
     }
-    .content__container {
-      cursor: pointer;
-      color: $green;
-      &:hover {
-        color: black;
-      }
-      img {
-        max-width: 100%;
+    &:hover {
+      .post__content {
+        .visible {
+          display: none;
+        }
+        .invisible {
+          display: block;
+        }
       }
     }
   }
