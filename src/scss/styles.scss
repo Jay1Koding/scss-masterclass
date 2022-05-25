@@ -1,37 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&family=DM+Serif+Display&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  // font-family: 'B612 Mono', monospace;
   font-family: 'DM Serif Display', serif;
+
   padding: 45px;
 }
 
+h1 {
+  font-size: 62px;
+  margin-bottom: 20px;
+}
+
+h6 {
+  font-family: 'B612 Mono', monospace;
+  font-size: 12px;
+  letter-spacing: -1.1px;
+}
+
 header {
-  background-color: black;
-  border: 1px solid black;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   nav {
+    border: 1px solid black;
     ul {
+      background-color: black;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 60px);
-
       gap: 1px;
       li {
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        background-color: white;
         &:nth-child(2) {
-          grid-column-start: span 2;
-          font-size: 32px;
+          grid-column: span 2;
+          font-size: 38px;
+          letter-spacing: 1.2px;
           text-transform: uppercase;
-          letter-spacing: 2px;
         }
       }
     }
@@ -39,94 +49,85 @@ header {
 }
 
 main {
-  h1,
-  h6 {
-    text-align: center;
-  }
-  h1 {
-    font-size: 58px;
-    margin-bottom: 20px;
-  }
-  h6 {
-    font-family: 'B612 Mono', monospace;
-    font-size: 12px;
-    letter-spacing: -1px;
-    margin-bottom: 50px;
-  }
-}
+  text-align: center;
 
-.hero {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 70vh;
-  margin-bottom: 120px;
-  .hero__img {
-    background-image: url('https://source.unsplash.com/random');
-    background-size: cover;
-    background-position: center;
-    &:first-child {
-      background-image: url('https://source.unsplash.com/random/1');
-    }
-    &:last-child {
-      background-image: url('https://source.unsplash.com/random/2');
-    }
-    &:nth-last-child(2) {
-      background-image: url('https://source.unsplash.com/random/3');
+  .hero__imgs {
+    margin: 68px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70vh;
+    .hero__img {
+      max-height: 100%;
+      background-image: url('https://source.unsplash.com/random');
+      background-size: cover;
+      background-position: center;
+      &:first-child {
+        background-image: url('https://source.unsplash.com/random/1');
+      }
+      &:nth-last-child(2) {
+        background-image: url('https://source.unsplash.com/random/2');
+      }
+      &:last-child {
+        background-image: url('https://source.unsplash.com/random/3');
+      }
     }
   }
 }
 
 .arrivals {
   h4 {
-    font-size: 36px;
-    margin-bottom: 70px;
+    font-size: 38px;
     text-align: center;
+    margin-bottom: 68px;
   }
   .wrapper {
-    border: 1px solid black;
+    background-color: black;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 80vh auto;
-    background-color: black;
     gap: 1px;
+    border: 1px solid black;
+
     .product,
-    .arrivals__category {
+    span {
       background-color: white;
     }
-    .arrivals__category {
-      grid-column-start: span 2;
-      text-align: center;
-      font-size: 20px;
-      padding: 20px 0;
-    }
+
     .product {
       padding: 40px;
-      display: grid;
-      gap: 20px;
-      grid-template-rows: 80% auto auto;
-      .product__photo {
-        background-color: black;
+      .product__img {
+        height: 80%;
+        background-image: url('https://source.unsplash.com/random');
+        background-size: cover;
+        background-position: center;
       }
       .product__data {
         display: flex;
         flex-direction: column;
-        .price {
-          margin-top: 10px;
+        align-items: flex-start;
+        span {
+          margin: 10px 0;
         }
       }
     }
   }
+  .arrivals__category {
+    grid-column: span 2;
+    font-size: 20px;
+    padding: 15px 0;
+  }
 }
 
 footer {
-  margin: 100px 0;
-  height: 200px;
-  background-color: gray;
-  gap: 1px;
-  border: 1px solid black;
+  margin: 120px 0;
   display: grid;
+  height: 200px;
+  background-color: black;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 10fr 2fr;
+  gap: 1px;
+  border: 1px solid black;
   div {
     background-color: white;
     &:first-child {
